@@ -1,0 +1,40 @@
+<html>
+<meta charset="UTF-8"/>
+<body>
+  <script language="javascript">
+function login_onclick() {
+theForm=document.frm1;
+if(theForm.id.value=="apple"&&theForm.password.value=="001") {
+alert("�悤�����B"+theForm.id.value+"�l�B");
+location.href="staffmain.html";
+return;
+} else {
+history.back();
+}
+}
+</script>
+
+  <title>Login</title>
+</head>
+
+<body>
+  <div id ="main">
+    <h1>일반 회원 로그인</h1>
+
+    <div class="box">
+      <form name="frm1" action="login_onclick()">
+        <p>아이디<br><input type="text" name="id"></p>
+        <p>비밀번호<br><input type="password" name="password"></p>
+        <p><input type="button" value="로그인" style="cursor:pointer" onclick="login_onclick()"></p>
+      </form>
+      비밀번호를 잊어버린 경우 →<a href="./password.html" style="cursor:pointer">이쪽</a></br>
+      회원가입 →<a href="./add_id.html" style="cursor:pointer">이쪽</a></br>
+      사장님 로그인 →<a href="./add_store_id.html" style="cursor:pointer">이쪽</a></br>
+
+    </div>
+    <input type="button" class="return_btn" value="돌아가기" style="cursor:pointer" onclick="history.back()">
+
+
+  </div>
+</body>
+</html>
